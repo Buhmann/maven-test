@@ -9,6 +9,9 @@
     <h:body>
         Hello from Facelets
         <h1>f!ck</h1>
+        <h2>#{msg['welcome.title']}</h2>
+        <h3>#{msg['welcome.text']}</h3>
+        #{facesContext.externalContext.requestLocale}
     </h:body>
 </html>
 
