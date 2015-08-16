@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"  
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view locale="#{language.language}">
+            <div id="header">
+                <h2>#{msg['welcome.title']}</h2>
+                <h3>#{msg['welcome.text']}</h3>
+                
+                <h:form id="langauge_form">
+                <h:selectOneMenu value="#{language.language}" onchange="submit()" valueChangeListener="#{language.changeLanguageListener}">
+                    <f:selectItem itemValue="de" itemLabel="Deutsch" />
+                    <f:selectItem itemValue="en" itemLabel="Englisch" />	
+                </h:selectOneMenu>
+
+                </h:form>
+
+               
+            </div>
+            <div class="navigation">
+
+            </div>
+            <div class="content">
+                <ui:insert name="content">
+
+                </ui:insert>
+            </div>
+            <div class="footer">
+
+            </div>
+
+
+        </f:view>
+    </h:body>
+</html>
+
